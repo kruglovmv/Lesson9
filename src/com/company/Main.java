@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         int x;
         x = new Random().nextInt(6)+1;
+        //x = 4;
         String [] [] str = new String[x][x];
         for (int i = 0; i < str.length; i++) {
             for (int j = 0; j < str[i].length; j++) {
@@ -16,7 +17,7 @@ public class Main {
         str[x-1][x-1] = "ghjk";
         System.out.println("Длина массива " + x);
         try {
-                System.out.println(stringArrayException(str));
+                System.out.println("Сумма элементов массива = "+ stringArrayException(str));
             }catch (MyArrayDataException | MyArraySizeException e) {
                 System.out.println(e);
             }
